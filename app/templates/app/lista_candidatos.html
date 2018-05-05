@@ -8,7 +8,7 @@
 </div>
 
 <table class="table">
-    <tr><th>Nome do candidato</th><th>Período</th><th>Faculdade</th></tr>
+    <tr><th>Nome do candidato</th><th>RG</th><th>CPF</th><th>Endereço</th><th>telefone</th></tr>
         {% for candidato in candidatos %}
           <tr><td>{{ candidato.nome }}</td><td>{{ candidato.rg }}</td><td>{{ candidato.cpf }}</td>
             <td>{{ candidato.endereco }}</td>
