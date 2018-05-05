@@ -89,3 +89,17 @@ def lista_candidatos(request):
         })
     )
 
+def lista_locais_provas(request):
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/listagem_provas.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Cadastro de Locais de Provas',
+            'locais': LocaisProva.objects.all(),
+            'year':datetime.now().year,
+        })
+    )
+
+
